@@ -1,0 +1,34 @@
+name: Node.js CI
+
+on:
+  push:
+    branches:
+      - main # Egzekite workflow sa a sèlman lè gen yon "push" sou branch "main"
+  pull_request:
+    branches:
+      - main # Egzekite workflow lè gen yon "pull request" sou branch "main"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Clone the repository
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16 # Chwazi vèsyon Node.js ou bezwen
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run lint checks
+      run: npm run lint # Asire w gen yon script lint nan `package.json`
+
+    - name: Run tests
+      run: npm test # Kouri tès otomatik si yo egziste
+
+    - name: Build the project
+      run: npm run build # Sa se si ou gen yon etap pou "build" aplikasyon an
