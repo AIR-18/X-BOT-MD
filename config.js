@@ -1,6 +1,7 @@
 const fs = require('fs');
 const dotenv = require('dotenv');
 const { Sequelize } = require('sequelize');
+
 if (fs.existsSync('config.env')) {
   dotenv.config({
     path: './config.env'
@@ -11,11 +12,11 @@ const LOGS = process.env.LOGS || "false";
 const API = "https://api-aswin-sparky.koyeb.app";
 const ALIVE = process.env.ALIVE || "I am Alive";
 const HANDLERS = process.env.HANDLERS || ".";
-const SESSION_ID = process.env.SESSION_ID || "";
-const SUDO = process.env.SUDO || '917012984396';
+const SESSION_ID = process.env.SESSION_ID || "A-S-W-I-N-S-P-A-R-K-Y:306b85a7938e04df339e1e7080ed42bb";
+const SUDO = process.env.SUDO || '+18494409195';
 const AUTO_STATUS_VIEW = process.env.AUTO_STATUS_VIEW || "true";
 const ALWAYS_ONLINE = process.env.ALWAYS_ONLINE || "false";
-const DISABLE_PM = process.env.DISABLE_PM  || "false";
+const DISABLE_PM = process.env.DISABLE_PM || "false";
 const PM_BLOCK = process.env.PM_BLOCK || "false";
 const PMB = process.env.PMB || "Sorry, I can't help you in private chat.";
 const READ_MESSAGES = process.env.READ_MESSAGES || "false";
@@ -28,17 +29,6 @@ const DATABASE_URL = process.env.DATABASE_URL || "./lib/database.db";
 const HEROKU_APP_NAME = process.env.HEROKU_APP_NAME || "";
 const HEROKU_API_KEY = process.env.HEROKU_API_KEY || "";
 const KOYEB_API_KEY = process.env.KOYEB_API_KEY || "";
-
-
-
-
-
-
-
-
-
-
-
 
 module.exports = {
   API,
@@ -58,7 +48,7 @@ module.exports = {
   READ_MESSAGES,
   DISABLE_PM,
   URL,
-  VERSION:"3.2.0",
+  VERSION: "3.2.0",
   HEROKU_API_KEY,
   HEROKU_APP_NAME,
   KOYEB_API_KEY,
